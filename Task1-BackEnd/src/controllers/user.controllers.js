@@ -8,7 +8,8 @@ let logoutController=asyncHandler((req,res)=>{
 
  res.clearCookie("token", {
    httpOnly: true,
-   sameSite: "lax"
+   sameSite: "none",
+   secure:true
 })
   return res.status(200).json(new ApiResponse("User logout successfully"))
 })
