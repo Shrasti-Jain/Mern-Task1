@@ -69,7 +69,7 @@ const Home = () => {
 
         <div className="rounded-2xl bg-white/5 border-2 border-white/15 hover:border-pink-400/50 hover:shadow-md hover:shadow-pink-500/10 transition p-5">
           <p className="text-xs text-gray-400">Shortest Session</p>
-          <h2 className="text-2xl font-semibold mt-1">{minHour}</h2>
+          <h2 className="text-2xl font-semibold mt-1">{minHour==10000?0:minHour}</h2>
         </div>
 
       </div>
