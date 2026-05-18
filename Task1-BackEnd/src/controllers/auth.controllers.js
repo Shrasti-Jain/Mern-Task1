@@ -98,7 +98,7 @@ let forgotPasswordController=asyncHandler(async(req,res)=>{
 
     let rawToken=user.generateToken()
 
-    let rawLink=`https://mern-task1-3n42.vercel.app/api/auth/user/reset-password/${rawToken}`
+    let rawLink=`https://mern-task1-omega.vercel.app/api/auth/user/reset-password/${rawToken}`
      
    await sentMailTo(
   email,
