@@ -121,7 +121,7 @@ let forgotPasswordController=asyncHandler(async(req,res)=>{
 
     let rawToken=user.generateToken()
 
-    let rawLink=`http://localhost:3000/api/auth/user/reset-password/${rawToken}`
+    let rawLink=`https://mern-task1-4sct.onrender.com/api/auth/user/reset-password/${rawToken}`
      
    await sentMailTo(
   email,
