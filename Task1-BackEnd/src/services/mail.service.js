@@ -10,7 +10,7 @@ let transporter=nodemailer.createTransport({
 
 let sentMailTo=async (to,subject,html)=>{
      let options={
-        from:process.env.USER,
+        from:process.env.EMAIL_USER,
         to,
         subject,
         html
