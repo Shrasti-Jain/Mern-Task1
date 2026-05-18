@@ -5,17 +5,14 @@ import {useNavigate} from 'react-router';
 
 const ForgotPage = () => {
    let [isLoading,setIsLoading]=useState(false)
-  let ref=useRef({})
+  const [email, setEmail] = useState("");
   let navigate = useNavigate();
 
   let handleSubmit=async (e)=>{
      e.preventDefault()
-     let data={
-      email:ref.current.email.value,
-     }
      try {
         setIsLoading(true)
-        let res=await axiosInstance.post('/api/auth/user/forget-password',data)
+        let res=await axiosInstance.post('/api/auth/user/forget-password',{email})
         toast.success("Mail sent successfully")
      } catch (error) {
         toast.error(error.response.data.message);
@@ -49,7 +46,7 @@ const ForgotPage = () => {
 
           
           <input
-            ref={(e)=>ref.current.email=e}
+            onChange={(e) => setEmail(e.target.value)}
             className='w-full px-4 py-3 rounded-xl bg-white/5 border border-emerald-500/20 text-white placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition'
             required
             type="email"
