@@ -38,29 +38,6 @@ let registerController=asyncHandler(async (req,res)=>{
         secure:true
      })
      
-      await sentMailTo(
-   email,
-  "Registered Successfully",
-  `
-    <div style="font-family: Arial, sans-serif; padding: 20px;">
-      <h2 style="color: #4CAF50;">Registration Successful 🎉</h2>
-      
-      <p>Hello User,</p>
-      
-      <p>
-        Your account has been successfully registered.
-      </p>
-
-      <p>
-        Welcome to our platform. We're excited to have you with us!
-      </p>
-
-      <p style="margin-top:20px;">
-        Thanks & Regards,<br/>
-        Team
-      </p>
-    </div>
-  `)
 
   let safeUser = newUser.toObject()
   delete safeUser.password
