@@ -34,7 +34,7 @@ let registerController=asyncHandler(async (req,res)=>{
   
      res.cookie("token",token,{
         httpOnly:true,
-        sameSite:'lax'
+        sameSite:'none'
      })
      
       await sentMailTo(
@@ -92,7 +92,7 @@ let loginController=asyncHandler(async(req,res)=>{
 
      res.cookie("token",token,{
       httpOnly:true,
-      sameSite:'lax'
+      sameSite:'none'
      })
      
      let safeUser = isExisted.toObject()
