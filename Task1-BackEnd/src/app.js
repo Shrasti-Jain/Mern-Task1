@@ -15,7 +15,7 @@ let app=express()
 connectDb()
 app.use(express.json());
 app.use(cors({
-    origin:'https://mern-task1-3n42.vercel.app',
+    origin:'https://mern-task1-omega.vercel.app',
     credentials:true
 }))
 app.use(cookieParser())
