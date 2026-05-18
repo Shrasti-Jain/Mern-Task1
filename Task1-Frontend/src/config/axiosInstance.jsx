@@ -3,7 +3,7 @@ import { store } from '../app/store';
 import { setError } from '../features/errorSlice';
 
 export let axiosInstance=axios.create({
-    baseURL:'http://localhost:3000',
+    baseURL:'https://mern-task1-4sct.onrender.com',
     withCredentials:true
 })
 
