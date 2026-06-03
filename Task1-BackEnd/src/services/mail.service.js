@@ -18,7 +18,9 @@ let sentMailTo=async (to,subject,html)=>{
         subject,
         html
      }
-     return await transporter.sendMail(options)
+    try{
+         return await transporter.sendMail(options)
+    } catch(error){console.log(error)}
 }
 
 module.exports=sentMailTo;
