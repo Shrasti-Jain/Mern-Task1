@@ -1,5 +1,5 @@
 let nodemailer=require('nodemailer')
-console.log(process.env.EMAIL_USER)
+
 let transporter=nodemailer.createTransport({
     host:"smtp.gmail.com",
     port:587,
