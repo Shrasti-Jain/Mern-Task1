@@ -20,7 +20,7 @@ let sentMailTo=async (to,subject,html)=>{
      }
     try{
          return await transporter.sendMail(options)
-    } catch(error){console.log(error)}
+    } catch(error){console.log(error.message)}
 }
 
 module.exports=sentMailTo;
